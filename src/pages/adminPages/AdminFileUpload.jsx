@@ -2,7 +2,7 @@
 
 import React from "react";
 import LeftPanel from "../../components/AdminLeftPanel"; // Import the LeftPanel component
-import {FileUpload} from "../../components/FileUpload"; // Import the MainContent component
+import FileUpload from "../../components/FileUpload"; // Import the MainContent component
 import { useUserContext } from '../../contexts/UserContext'; // Import the custom hook
 
 

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useUserContext } from '../../contexts/UserContext'; // Import the custom hook
-import LeftPanel from "../../components/AdminLeftPanel"; // Import your existing Left Panel
+import LeftPanel from "../../components/MakerAuthLeftPanel"; // Import your existing Left Panel
 import EmployeePage from "../../components/EmployeePage"; // Import the CommonDetailsContent
 import {useNavigate} from 'react-router-dom';
 

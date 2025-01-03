@@ -55,6 +55,7 @@ const MainContent = () => {
   
       const data = await response.json();
       console.log('Success:', data);
+      alert("Users Updated Successfully")
       // Optionally, you can show a success message or update the UI
     } catch (error) {
       console.error('Error:', error.message);
