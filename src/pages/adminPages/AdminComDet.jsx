@@ -50,7 +50,7 @@ const CommonDetails = () => {
       <LeftPanel userData={userData} />
 
       {/* Main Content */}
-      <CommonDetailsContent onSubmit={handleSubmit} onCancel={handleCancel} userData={userData} />
+      <CommonDetailsContent onSubmit={handleSubmit} onCancel={handleCancel} userData={userData} disabled={false} Lable="Submit" />
     </div>
   );
 };

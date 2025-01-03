@@ -2,13 +2,16 @@
 
 import React from "react";
 import LeftPanel from "../../components/MakerAuthLeftPanel"; // Import the LeftPanel component
-import FileUpload from "../../components/FileUpload"; // Import the MainContent component
+import {FileUpload} from "../../components/FileUpload"; // Import the MainContent component
+import { useUserContext } from '../../contexts/UserContext'; // Import the custom hook
 
 const AdminAddUsers = () => {
+    const { userData } = useUserContext();
     const links = [
         { label: "Common details", path: "/MakerComDet" },
         { label: "File upload", path: "/MakerFileUpload" },
-        { label: "Update employee details", path: "/MakerEditEmp" }
+        { label: "Update employee details", path: "/MakerEditEmp" },
+        { label: "Logout", path: "/" }
     ];
     console.log("Component is rendering");
     const handleSubmit = () => {
@@ -23,7 +26,7 @@ const AdminAddUsers = () => {
     return (
         <div className="flex h-screen">
         {/* Left Panel */}
-        <LeftPanel links={links} />
+        <LeftPanel userData={userData} links={links} />
 
 
         {/* Main Content with custom button label */}
@@ -31,8 +34,9 @@ const AdminAddUsers = () => {
         submitLabel="Submit" // Custom label for submit button
         onSubmit={handleSubmit}  // Submit function
         cancelLabel="Go Back"    // Custom label for cancel button
-        onCancel={handleCancel}  // Cancel function
-      />
+        onCancel={handleCancel} 
+        fileLable="Add New Employee" // Cancel function
+        />
         </div>
     );
 };

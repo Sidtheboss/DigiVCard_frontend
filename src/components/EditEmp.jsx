@@ -3,7 +3,7 @@ import { useUserContext } from '../contexts/UserContext'; // Import the custom h
 import {useNavigate} from 'react-router-dom';
 
 
-const MainContent = () => {
+const MainContent = ({ navigateTo }) => {
     const { userData } = useUserContext(); // Access global user data
     const [searchTerm, setSearchTerm] = useState("");
     const [filteredData, setFilteredData] = useState([]);
@@ -34,7 +34,7 @@ const MainContent = () => {
         setFilteredData([]);
     
         // Navigate with state
-        navigate('/AdminEmp', { state: { common_name, profile_id } });
+        navigate(navigateTo, { state: { common_name, profile_id } });
     };
 
     return (

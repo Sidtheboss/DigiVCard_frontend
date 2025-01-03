@@ -11,10 +11,14 @@ import AdminEmpDets from './pages/adminPages/AdminEmpDets';
 import MakerComDet from './pages/makerPages/MakerComDet';
 import MakerEditEmp from './pages/makerPages/MakerEditEmp';
 import MakerFileUpload from './pages/makerPages/MakerFileUpload';
+import MakerEmpDets from './pages/makerPages/MakerEmpDets';
+
 
 import AuthComDets from './pages/authPages/AuthComDets';
 import AuthEditEmp from './pages/authPages/AuthEditEmp';
 import AuthFileUpload from './pages/authPages/AuthFileUpload';
+import AuthEmpDets from './pages/authPages/AuthEmpDets';
+
 
 
 function App() {
@@ -32,10 +36,13 @@ function App() {
             <Route path="/MakerComDet" element={<MakerComDet />} />
             <Route path="/MakerEditEmp" element={<MakerEditEmp />} />
             <Route path="/MakerFileUpload" element={<MakerFileUpload />} />
+            <Route path="/MakerEmp" element={<MakerEmpDets />} />
+
 
             <Route path="/AuthComDet" element={<AuthComDets />} />
             <Route path="/AuthEditEmp" element={<AuthEditEmp />} />
             <Route path="/AuthFileUpload" element={<AuthFileUpload />} />
+            <Route path="/AuthEmp" element={<AuthEmpDets />} />
 		</Routes>
 	</Router>
   )

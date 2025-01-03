@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "../images/image_1.jpeg"; // Correct image import
 import { useUserContext } from '../contexts/UserContext'; // Import the custom hook
 
-const CommonDetailsContent = ({ onSubmit, onCancel }) => {
+const CommonDetailsContent = ({ onSubmit, onCancel, disabled, Lable }) => {
     const { userData } = useUserContext(); // Access global user data
     const [isLoading, setIsLoading] = useState(true); // Loading state
     const [error, setError] = useState(null); // Error state
@@ -83,6 +83,7 @@ const CommonDetailsContent = ({ onSubmit, onCancel }) => {
                         placeholder="Enter Profile Title"
                         value={formData.title}
                         onChange={handleInputChange}
+                        disabled={disabled}
                     />
                 </div>
 
@@ -103,6 +104,7 @@ const CommonDetailsContent = ({ onSubmit, onCancel }) => {
                         placeholder="Enter Entity Name"
                         value={formData.company_name}
                         onChange={handleInputChange}
+                        disabled={disabled}
                     />
                 </div>
 
@@ -114,6 +116,7 @@ const CommonDetailsContent = ({ onSubmit, onCancel }) => {
                         placeholder="Enter Description"
                         value={formData.description}
                         onChange={handleInputChange}
+                        disabled={disabled}
                     ></textarea>
                 </div>
 
@@ -126,6 +129,7 @@ const CommonDetailsContent = ({ onSubmit, onCancel }) => {
                         placeholder="Enter Entity Subname"
                         value={formData.company_subname}
                         onChange={handleInputChange}
+                        disabled={disabled}
                     />
                 </div>
 
@@ -138,6 +142,7 @@ const CommonDetailsContent = ({ onSubmit, onCancel }) => {
                         placeholder="Enter Website URL"
                         value={formData.website_url}
                         onChange={handleInputChange}
+                        disabled={disabled}
                     />
                 </div>
             </div>
@@ -148,7 +153,7 @@ const CommonDetailsContent = ({ onSubmit, onCancel }) => {
                     className="bg-blue-900 text-white px-6 py-2 rounded"
                     onClick={() => onSubmit(formData)}
                 >
-                    Submit
+                    {Lable}
                 </button>
                 <button className="bg-gray-300 text-black px-6 py-2 rounded" onClick={onCancel}>
                     Cancel

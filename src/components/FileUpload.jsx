@@ -4,7 +4,7 @@ import { IoClose } from "react-icons/io5"; // Close Icon
 import Image from "../images/image_1.jpeg"; // Your logo image import
 import { useUserContext } from '../contexts/UserContext'; // Import the custom hook
 
-const FileUpload = ({ submitLabel, onSubmit, cancelLabel, onCancel }) => {
+const FileUpload = ({ submitLabel, onSubmit, cancelLabel, onCancel, fileLable }) => {
   const { userData } = useUserContext(); // Access global user data
   const [selectedFile, setSelectedFile] = useState(null); // State to store the selected file
 
@@ -67,7 +67,7 @@ const FileUpload = ({ submitLabel, onSubmit, cancelLabel, onCancel }) => {
           className="bg-gray-600 text-white px-6 py-2 rounded-3xl flex items-center space-x-2"
           onClick={() => document.getElementById("fileInput").click()} // Trigger file input click
         >
-          <span>Add New Employee</span>
+          <span>{fileLable}</span>
           <FiUpload className="h-5 w-5" /> {/* Upload Icon */}
         </button>
 
@@ -113,5 +113,4 @@ const FileUpload = ({ submitLabel, onSubmit, cancelLabel, onCancel }) => {
     </main>
   );
 };
-
 export default FileUpload;

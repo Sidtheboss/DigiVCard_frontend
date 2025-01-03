@@ -89,6 +89,7 @@ const EmployeePage = ({ onSubmit, onCancel }) => {
                         placeholder="Enter Employee Name"
                         value={formData.Emp_name}
                         onChange={handleInputChange}
+                        disabled={true}
                     />
                 </div>
 
@@ -101,6 +102,7 @@ const EmployeePage = ({ onSubmit, onCancel }) => {
                         placeholder="Enter Profile Title"
                         value={formData.Emp_title}
                         onChange={handleInputChange}
+                        disabled={true}
                     />
                 </div>
 
@@ -113,6 +115,7 @@ const EmployeePage = ({ onSubmit, onCancel }) => {
                         placeholder="Enter Employee Designation"
                         value={formData.Emp_designation}
                         onChange={handleInputChange}
+                        disabled={true}
                     />
                 </div>
 
@@ -125,6 +128,7 @@ const EmployeePage = ({ onSubmit, onCancel }) => {
                         placeholder="Enter Employee Qualification"
                         value={formData.Emp_qualification}
                         onChange={handleInputChange}
+                        disabled={true}
                     />
                 </div>
 
@@ -137,6 +141,7 @@ const EmployeePage = ({ onSubmit, onCancel }) => {
                         placeholder="Enter Phone Number"
                         value={formData.Emp_phone}
                         onChange={handleInputChange}
+                        disabled={true}
                     />
                 </div>
 
@@ -149,6 +154,7 @@ const EmployeePage = ({ onSubmit, onCancel }) => {
                         placeholder="Enter Employee Email"
                         value={formData.Emp_email}
                         onChange={handleInputChange}
+                        disabled={true}
                     />
                 </div>
             </div>
@@ -157,9 +163,9 @@ const EmployeePage = ({ onSubmit, onCancel }) => {
             <div className="mt-8 flex justify-center space-x-4">
                 <button
                     className="bg-blue-900 text-white px-6 py-2 rounded"
-                    onClick={() => onSubmit(formData)}
+                    onClick={() => onSubmit()}
                 >
-                    Submit
+                    Authorize
                 </button>
                 <button className="bg-gray-300 text-black px-6 py-2 rounded" onClick={onCancel}>
                     Cancel

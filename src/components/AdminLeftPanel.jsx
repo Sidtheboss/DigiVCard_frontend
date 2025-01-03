@@ -27,6 +27,9 @@ const LeftPanel = ({
                 <a className="block hover:underline" onClick={()=>navigate('/AdminEditEmp')}>
                 Update employee details
                 </a>
+                <a className="block hover:underline" onClick={()=>navigate('/')}>
+                Logout
+                </a>
             </nav>
         </aside>
     );

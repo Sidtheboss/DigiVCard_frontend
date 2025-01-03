@@ -8,6 +8,13 @@ import {useNavigate} from 'react-router-dom';
 
 
 const CommonDetails = () => {
+  const links = [
+    { label: "Common details", path: "/MakerComDet" },
+    { label: "File upload", path: "/MakerFileUpload" },
+    { label: "Update employee details", path: "/MakerEditEmp" },
+    { label: "Logout", path: "/" }
+  ];
+
   const { userData } = useUserContext(); // Access global user data
   console.log(userData?.company_id); // Check if this prints a valid value
     const navigate = useNavigate();
@@ -47,7 +54,7 @@ const CommonDetails = () => {
   return (
     <div className="flex h-screen">
       {/* Left Panel */}
-      <LeftPanel userData={userData} />
+      <LeftPanel userData={userData} links={links} />
 
       {/* Main Content */}
       <EmployeePage onSubmit={handleSubmit} onCancel={handleCancel} userData={userData} />
